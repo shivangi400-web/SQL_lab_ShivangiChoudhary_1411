@@ -11,8 +11,8 @@ Display empno, ename, deptno from employee table. Instead of display department 
 ### Query
 ```sql
 SELECT EMPNO, ENAME, 
-       DECODE(DEPTNO, 10, 'RESEARCH', 20, 'ACCOUNTING', 
-                       30, 'SALES', 40, 'OPERATIONS') AS DEPTNAME
+DECODE(DEPTNO, 10, 'RESEARCH', 20, 'ACCOUNTING', 
+30, 'SALES', 40, 'OPERATIONS') AS DEPTNAME
 FROM EMPLOYEE;
 ```
 
@@ -41,7 +41,7 @@ Display your age in days.
 
 ### Query
 ```sql
-SELECT TRUNC(SYSDATE - TO_DATE('18-MAR-2006', 'DD-MON-YYYY')) AS AGE_IN_DAYS
+SELECT TRUNC(SYSDATE - TO_DATE('28-OCT-2006', 'DD-MON-YYYY')) AS AGE_IN_DAYS
 FROM DUAL;
 ```
 
@@ -59,7 +59,7 @@ Display your age in months.
 
 ### Query
 ```sql
-SELECT TRUNC(MONTHS_BETWEEN(SYSDATE, TO_DATE('18-MAR-2006', 'DD-MON-YYYY'))) AS AGE_IN_MONTHS
+SELECT TRUNC(MONTHS_BETWEEN(SYSDATE, TO_DATE('28-OCT-2006', 'DD-MON-YYYY'))) AS AGE_IN_MONTHS
 FROM DUAL;
 ```
 
