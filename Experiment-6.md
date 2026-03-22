@@ -41,8 +41,7 @@ Display your age in days.
 
 ### Query
 ```sql
-SELECT TRUNC(SYSDATE - TO_DATE('28-OCT-2006', 'DD-MON-YYYY')) AS AGE_IN_DAYS
-FROM DUAL;
+SELECT DATEDIFF("2026-02-18","2004-10-28");
 ```
 
 ### Output
@@ -50,7 +49,7 @@ FROM DUAL;
 |-------------|
 | 7300 |
 
-**Note:** Age calculated from birth date to current date (18-MAR-2006 to 18-MAR-2026).
+**Note:** Age calculated from birth date to current date (28-OCT-2004 to 18-MAR-2026).
 
 ---
 
@@ -59,8 +58,7 @@ Display your age in months.
 
 ### Query
 ```sql
-SELECT TRUNC(MONTHS_BETWEEN(SYSDATE, TO_DATE('28-OCT-2006', 'DD-MON-YYYY'))) AS AGE_IN_MONTHS
-FROM DUAL;
+SELECT TIMESTAMPDIFF(MONTH,"2004-10-28",CURDATE());
 ```
 
 ### Output
@@ -68,7 +66,7 @@ FROM DUAL;
 |---------------|
 | 240 |
 
-**Note:** Age in months from birth date (18-MAR-2006) to current date.
+**Note:** Age in months from birth date (28-OCT-2004) to current date.
 
 ---
 
